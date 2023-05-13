@@ -1,10 +1,10 @@
 <?php
 // Definir los detalles de la conexión
-$host = 'containers-us-west-190.railway.app';
-$port = '6291';
-$username = 'root';
-$password = 'eKxf6ZmmpI8dShZCi0Xy';
-$database = 'railway';
+$host = '';
+$port = '';
+$username = '';
+$password = '';
+$database = '';
 
 // Establecer la conexión
 $conexion = mysqli_connect($host . ':' . $port, $username, $password, $database);
@@ -25,7 +25,7 @@ $usuario = $_POST['user'];
 $contrasena = $_POST['password'];
 
 // Consulta SQL para verificar si el usuario y la contraseña existen en la tabla "datausers"
-$sql = "SELECT * FROM datausers WHERE nameuser='$usuario' AND passusers='$contrasena'";
+$sql = "SELECT * FROM table WHERE your_row='$usuario' AND second_row='$contrasena'";
 $resultado = mysqli_query($conexion, $sql);
 
 // Verificar si se encontró al menos una fila
@@ -59,7 +59,7 @@ mysqli_close($conexion);
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="src/logo.png" width="150px" height="60px" alt="Logo">
+                <img src="src/your_logo.png" width="150px" height="60px" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNav()">
                 <span class="navbar-toggler-icon"></span>
